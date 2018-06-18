@@ -9,7 +9,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://api.tvmaze.com/search/shows=?q=Vikings')
+    fetch('http://api.tvmaze.com/search/shows?q=Supernatural')
+    .then((response) => response.json())
+    .then(json => console.log(json));
   }
 
   render() {
