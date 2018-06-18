@@ -38,6 +38,9 @@ class Series extends Component {
                     &&
                     <p>No TV series have been found with this name</p>
                 }
+                {
+                    isFetching && <p>Loading...</p>
+                }
                 <SeriesList list={this.state.series}/>
             </div>
         )
