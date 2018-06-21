@@ -41,7 +41,10 @@ class Series extends Component {
                 {
                     isFetching && <p>Loading...</p>
                 }
-                <SeriesList list={this.state.series}/>
+                {
+                    !isFetching && 
+                    <SeriesList list={this.state.series}/>
+                }
             </div>
         )
     }
